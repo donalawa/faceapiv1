@@ -41,7 +41,7 @@ module.exports = async(req, res, next) => {
     console.log('#################3GALERY NAME************')
     console.log("GalleryName:  " + req.headers['galleryname'])
     console.log("UserName:   " + req.headers['username'])
-    console.log('#################3USERNAME************')
+    console.log('#################3US daaeERNAME************')
 
     const userName = req.headers['username']
     const imageurl = req.publicUrl;
