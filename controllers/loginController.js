@@ -34,14 +34,17 @@ module.exports = (req, res) => {
 
 
     api_req.end(function(api_res) {
+        console.log('REQUEST END')
         if (api_res.status == 200)
 
             try {
+                console.log("INSIDE TRY")
             if (api_res.body.images[0].transaction.status == "success")
                 res.json({ status: true, message: 'Face reconnue dans le système', name: api_res.body.images[0].transaction.subject_id })
             else
                 res.json({ status: false, message: "Face non reconnue dans le système" })
         } catch (error) {
+            console.log("INSIDE CATCH")
             res.json({ status: false, message: "Aucun utilisateur existant dans le système" })
         }
 
