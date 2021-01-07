@@ -112,7 +112,7 @@ module.exports = async(req, res, next) => {
                             api_req.end(function(api_res) {
                                 console.log(' *******  Request End ********')
                                 if (api_res.status == 403)
-                                console.log(' *******  registration-response 1 ********')
+                                // console.log(' *******  registration-response 1 ********')
                                     return res.json({ status: false, message: api_res.body });
                                 if (api_res.status == 200)
                                     return res.json({ status: true, message: "Enregistrement réussi" })
