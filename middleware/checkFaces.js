@@ -79,6 +79,7 @@ module.exports = (req, res, next) => {
                             res.json({ status: false, message: "Plusieurs faces ont &eacute;t&eacute; detect&eacute; dans l'image. Veuillez vous assurer d'etre seul dans l'image.", faces: api_res.body.images[0].faces.length })
                     } else {
                         console.log('******* An error occured ********')
+                        console.log(api_res)
                         res.json({ status: false, message: "Une erreur c'est produit. Veuillez re-essayer encore" })
 
                     }
